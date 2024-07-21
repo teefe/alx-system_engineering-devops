@@ -1,0 +1,27 @@
+There is series of events that go on when searched a statement headed above is typed into the browser and you press enter, here is a quick list of them as we talk about the one by one.
+
+URL Passing
+DNS Lookup
+TCP Connection
+TLS Handshake
+First Get Request
+HTML Parsing (Server Response)
+URL Passing
+At the very begining when a user presses enter the browser dertermines weather google.com is a url or a search term, if it is a search term then it will go a head and search it but if it is a url then it moves on to the step of find out the network protocol to connect too.
+
+Either http port 80 or https port 443, the browser find out wether the google website is under https or http. When it find google.com in the hsts list then it will choose https and the reverse is true.
+
+DNS Lookup
+The browser checks its cache for the DNS record of google.com. If not found, it queries a DNS server to resolve google.com to an IP address.
+
+TCP Connection
+The browser uses the resolved IP address to establish a TCP connection with the Google server, typically on port 443 for HTTPS.
+
+TLS Handshake
+The browser and server perform a TLS handshake to establish a secure connection. This includes verifying the server’s SSL certificate and negotiating encryption parameters.
+
+First Get Request
+The browser sends an HTTP GET request to the Google server for the homepage.
+
+HTML Parsing (Server Response)
+The Google server processes the request and sends back an HTTP response, which includes the HTML content of the homepage and possibly other resources (CSS, JavaScript, images).
